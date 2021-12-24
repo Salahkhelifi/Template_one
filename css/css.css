@@ -1148,7 +1148,7 @@ header .container .search i::after {
 }
 
 .contact-us .form input,
-.contact-us .form textarea :focus {
+.contact-us .form textarea:focus {
     outline: none;
 }
 
@@ -1183,5 +1183,75 @@ header .container .search i::after {
     line-height: 1.8;
 }
 
+@media (max-width:760px) {
+    .contact-us .container {
+        flex-direction: column;
+    }
+    .contact-us .container .infos {
+        align-self: center;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .contact-us .container .form {
+        order: 2;
+    }
+}
+
 
 /* end contact-us */
+
+
+/* start footer */
+
+.footer {
+    padding-top: calc(var(--main-padding) /2);
+    padding-bottom: calc(var(--main-padding)/ 2);
+    background-image: url(../images/subscribe.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.footer .container {
+    z-index: 3;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.footer .container img {
+    margin-bottom: 50px;
+}
+
+.footer .container p {
+    font-size: 25px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.footer .container img+p::after {
+    content: "";
+    width: 200px;
+    height: 1px;
+    background-color: white;
+    left: 50%;
+    top: calc(100% + 20px);
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.footer .container i {
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.footer .container p:last-of-type {
+    font-size: 18px;
+}
+
+.footer .container span {
+    color: var(--main-color);
+}
+
+
+/* end footer */
